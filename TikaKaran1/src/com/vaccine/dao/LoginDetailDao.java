@@ -1,14 +1,15 @@
-package com.vaccine.data;
+package com.vaccine.dao;
 
-import com.teeka.entity.LoginDetails;
 import static com.vaccine.service.OfyService.ofy;
 
-public class LoginDetailData {
+import com.vaccine.entity.LoginDetailsEntity;
+
+public class LoginDetailDao {
 
 		String email;
 	public boolean check(String email) {
 		
-		LoginDetails ld= ofy().load().type(LoginDetails.class).id(email).now();
+		LoginDetailsEntity ld= ofy().load().type(LoginDetailsEntity.class).id(email).now();
 		
 		if(ld!=null)
 			return true;
@@ -17,7 +18,7 @@ public class LoginDetailData {
 		
 	}
 
-	public void save(LoginDetails ld) {
+	public void save(LoginDetailsEntity ld) {
 		this.email=ld.email;
 		ofy().save().entities(ld);
 		ofy().clear();

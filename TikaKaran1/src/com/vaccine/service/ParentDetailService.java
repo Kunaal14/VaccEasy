@@ -1,16 +1,16 @@
 package com.vaccine.service;
 
-import com.teeka.entity.ParentDetails;
-import com.vaccine.data.ParentDetailData;
+import com.vaccine.dao.ParentDetailDao;
+import com.vaccine.entity.ParentDetailsEntity;
 
 public class ParentDetailService {
 	
 	
-	ParentDetailData parentDetailData=new ParentDetailData();
+	ParentDetailDao parentDetailData=new ParentDetailDao();
 
 	public void signup(String email, String fName, String lName, long number) {
 		
-		ParentDetails parentDetails= new ParentDetails(email,fName,lName,number);
+		ParentDetailsEntity parentDetails= new ParentDetailsEntity(email,fName,lName,number);
 		
 		parentDetailData.save(parentDetails);
 		

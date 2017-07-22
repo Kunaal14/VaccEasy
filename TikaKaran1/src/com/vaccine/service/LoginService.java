@@ -1,11 +1,11 @@
 package com.vaccine.service;
 
-import com.vaccine.data.LoginData;
+import com.vaccine.dao.LoginDao;
 
 public class LoginService {
 	
 	
-	LoginData loginData=new LoginData();
+	LoginDao loginData=new LoginDao();
 	
 	public boolean check(String email,String password)
 	{

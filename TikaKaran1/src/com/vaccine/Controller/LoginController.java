@@ -1,4 +1,4 @@
-package com.teeka.Controller;
+package com.vaccine.Controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,9 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import static com.vaccine.service.OfyService.ofy;
 
-import com.teeka.entity.ChildDetails;
-
-import com.teeka.entity.ParentDetails;
+import com.vaccine.entity.ChildDetailsEntity;
+import com.vaccine.entity.ParentDetailsEntity;
 import com.vaccine.service.LoginService;
 
 @SuppressWarnings("serial")
@@ -35,8 +34,8 @@ public class LoginController extends HttpServlet
 		if(loginService.check(email, password))
 		{
 			HttpSession sess=req.getSession();
-			ChildDetails cd= ofy().load().type(ChildDetails.class).id(email).now();
-			ParentDetails pd= ofy().load().type(ParentDetails.class).id(email).now();
+			ChildDetailsEntity cd= ofy().load().type(ChildDetailsEntity.class).id(email).now();
+			ParentDetailsEntity pd= ofy().load().type(ParentDetailsEntity.class).id(email).now();
 			sess.setAttribute("email",pd.email);
 			sess.setAttribute("fName",pd.fName);
 			sess.setAttribute("lName",pd.lName);

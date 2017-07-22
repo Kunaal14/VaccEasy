@@ -6,7 +6,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 <servlet>
 		<servlet-name>Final</servlet-name>
-		<servlet-class>com.teeka.Controller.SignupController</servlet-class>
+		<servlet-class>com.vaccine.Controller.SignupController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Final</servlet-name>
@@ -15,7 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>childLogin</servlet-name>
-		<servlet-class>com.teeka.Controller.LoginChildController</servlet-class>
+		<servlet-class>com.vaccine.Controller.LoginChildController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>childLogin</servlet-name>
@@ -24,7 +24,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>Login</servlet-name>
-		<servlet-class>com.teeka.Controller.LoginController</servlet-class>
+		<servlet-class>com.vaccine.Controller.LoginController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Login</servlet-name>

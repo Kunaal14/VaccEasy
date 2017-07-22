@@ -1,4 +1,4 @@
-package com.teeka.entity;
+package com.vaccine.entity;
 
 import org.joda.time.LocalDate;
 import com.googlecode.objectify.annotation.Entity;
@@ -6,7 +6,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 @Entity
-public class ChildDetails {
+public class ChildDetailsEntity {
 	@Id public String email;
 	@Index public String name;
 	public String gender;
@@ -16,12 +16,12 @@ public class ChildDetails {
 	public	String relation;
 	public String age;
 	
-	public ChildDetails()
+	public ChildDetailsEntity()
 	{
 		
 	}
 	
-	public ChildDetails(String email,String name,String gender,double height,double weight,LocalDate dob,String relation,String age)
+	public ChildDetailsEntity(String email,String name,String gender,double height,double weight,LocalDate dob,String relation,String age)
 	{
 		this.email=email;
 		this.name=name;

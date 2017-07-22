@@ -1,12 +1,12 @@
 package com.vaccine.service;
 
-import com.teeka.entity.LoginDetails;
-import com.vaccine.data.LoginDetailData;
+import com.vaccine.dao.LoginDetailDao;
+import com.vaccine.entity.LoginDetailsEntity;
 
 
 public class LoginDetailService {
 	
-	LoginDetailData loginDetailData = new LoginDetailData();
+	LoginDetailDao loginDetailData = new LoginDetailDao();
 	
 
 
@@ -18,7 +18,7 @@ public class LoginDetailService {
 	public void signup(String email, String pass,String user) {
 	
 		
-		LoginDetails ld= new LoginDetails(email,pass);
+		LoginDetailsEntity ld= new LoginDetailsEntity(email,pass);
 		loginDetailData.save(ld);
 	
 	}

@@ -1,4 +1,4 @@
-package com.teeka.entity;
+package com.vaccine.entity;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -6,17 +6,17 @@ import com.googlecode.objectify.annotation.Index;
 
 
 @Entity
-public class LoginDetails {
+public class LoginDetailsEntity {
 
 	@Id
 	public String email;
 	@Index public String pass;
 	
-	public LoginDetails()
+	public LoginDetailsEntity()
 	{
 	
 	}
-	public LoginDetails(String email,String pass)
+	public LoginDetailsEntity(String email,String pass)
 	{
 		this.email=email;
 		this.pass=pass;

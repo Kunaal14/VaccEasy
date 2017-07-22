@@ -1,18 +1,19 @@
-package com.vaccine.data;
+package com.vaccine.dao;
 
-import com.teeka.entity.LoginDetails;
 import static com.vaccine.service.OfyService.ofy;
 
+import com.vaccine.entity.LoginDetailsEntity;
 
 
-public class LoginData {
+
+public class LoginDao {
 
 	
 
 	public boolean checkAutorization(String email,String password) {
 		
 		
-		LoginDetails login=ofy().load().type(LoginDetails.class).id(email).now();
+		LoginDetailsEntity login=ofy().load().type(LoginDetailsEntity.class).id(email).now();
 		
 	
 		

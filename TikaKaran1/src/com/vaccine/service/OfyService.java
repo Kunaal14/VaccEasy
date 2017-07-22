@@ -3,17 +3,17 @@ package com.vaccine.service;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
-import com.teeka.entity.ChildDetails;
-import com.teeka.entity.LoginDetails;
-import com.teeka.entity.ParentDetails;
+import com.vaccine.entity.ChildDetailsEntity;
+import com.vaccine.entity.LoginDetailsEntity;
+import com.vaccine.entity.ParentDetailsEntity;
 
 
 
 public class OfyService {
     static {
-    	ObjectifyService.register(LoginDetails.class);
-    	ObjectifyService.register(ParentDetails.class);
-    	ObjectifyService.register(ChildDetails.class);
+    	ObjectifyService.register(LoginDetailsEntity.class);
+    	ObjectifyService.register(ParentDetailsEntity.class);
+    	ObjectifyService.register(ChildDetailsEntity.class);
     	
     	
     	

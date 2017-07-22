@@ -1,4 +1,4 @@
-package com.teeka.Controller;
+package com.vaccine.Controller;
 
 import java.io.IOException;
 
