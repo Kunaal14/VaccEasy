@@ -132,6 +132,7 @@
             </div>
           </div>
           </form>
+       <a href=customschedule.jsp>View Your Schedule</a>
   </div>
 </div>
 </div>
