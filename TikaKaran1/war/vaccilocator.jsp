@@ -38,8 +38,7 @@
 	}
 
 	function success(position) {
-  	//alert(position.coords.latitude + ', ' + position.coords.longitude);
-
+  	
 
 	
 
