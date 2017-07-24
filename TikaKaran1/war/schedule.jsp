@@ -60,7 +60,7 @@
 	}
 	th, td {
     padding: 15px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     }
     tr:nth-child(even) {background-color: #f2f2f2;}
@@ -82,7 +82,7 @@
 		
 	<div class="container"><h1> <span>General Vaccine Schedule</span>     </h1></div>
 	
-	<div class="container clearfix">
+	<div class="container">
 	<a href="custom.jsp">CUSTOMIZE YOUR SCHEDULE</a>
 	<table >
 		<tbody>
@@ -220,22 +220,22 @@
 			</tr>
 		</tbody>
 	</table>
-	<div class="container"><h3> <span>OR</span></h3></div>
+	<!-- <div class="container"><h3> <span>OR</span></h3></div>
 	<a href="Immunization-Chart-SuperBaby.pdf"><button type="button" class="btn btn-success" style="background-color:#28B463" >Download in PDF Format</button></a><br>
 	<p><div class="container"><h3> <span>OR</span></h3></div></p>
 	</div>
 	<br>
 	<p><div class="container"><iframe width="560" height="315" src="https://www.youtube.com/embed/myh8NfF7W54" frameborder="0" allowfullscreen></iframe></div></p>
-	<!-- Footer
+	 --><!-- Footer
 		============================================= -->
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark">
+		<!-- <footer id="footer" class="dark">
 
 			<div class="container">
 
-				<!-- Footer Widgets
-				============================================= -->
+				Footer Widgets
+				=============================================
 				<div class="footer-widgets-wrap clearfix">
 
 					<div class="col_one_third">
@@ -361,12 +361,12 @@ Bill Nye the Science Guy
 
 					</div>
 
-				</div><!-- .footer-widgets-wrap end -->
+				</div>.footer-widgets-wrap end
 
 			</div>
 
-			<!-- Copyrights
-			============================================= -->
+			Copyrights
+			=============================================
 			<div id="copyrights">
 
 				<div class="container clearfix">
@@ -385,25 +385,25 @@ Bill Nye the Science Guy
 
 				</div>
 
-			</div><!-- #copyrights end -->
+			</div>#copyrights end
 
-		</footer><!-- #footer end -->
-
-	</div><!-- #wrapper end -->
-
-	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-	<!-- Footer Scripts
-	============================================= -->
-	<script type="text/javascript" src="js/functions.js"></script>
+		</footer>#footer end
 
 	
+
+	Go To Top
+	=============================================
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	External JavaScripts
+	
+	Footer Scripts
+	=============================================
+	<script type="text/javascript" src="js/functions.js"></script>
+ -->
+ 
+	</div>
+	</div>
 </body>
 </html>
+<%@ include file="footer.jsp" %>
