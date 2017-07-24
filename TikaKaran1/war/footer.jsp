@@ -88,7 +88,7 @@
 					<div class="col_one_third">
 
 						<div class="widget clearfix">
-							<h4>Client Testimonials</h4>
+							<h4>Testimonials</h4>
 
 							<div class="fslider testimonial no-image nobg noborder noshadow nopadding" data-animation="slide" data-arrows="false">
 								<div class="flexslider">
