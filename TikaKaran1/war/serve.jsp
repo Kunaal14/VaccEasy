@@ -1,13 +1,11 @@
+<%@ page import="com.google.appengine.api.blobstore.BlobKey"%>
+<%@ page import="com.google.appengine.api.images.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ include file="header.jsp" %>
-
-  <%@ page
-	import="com.google.appengine.api.blobstore.BlobstoreServiceFactory"%>
-<%@ page import="com.google.appengine.api.blobstore.BlobstoreService"%>
     
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+      <%@ include file="header.jsp" %>
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 
@@ -43,48 +41,71 @@
  
 		</section><!-- #page-title end -->
 
+
+
+
+
 <!-- CONTENT  -->
+
 
 
 <div class="container">
     
   	
-	<div>
+
       <!-- left column -->
-    
-  <div class="col-md-3">
+      <!-- <div class="col-md-3">
         <div class="text-center">
           
+        
+          <h3><font color="#1abc9c">Update Profile Photo</font></h3>
+         
+          <input type="file" name="img" class="form-control">
+          <input type="submit" value="Submit">
+         </form>
+        </div>
+      </div> 
+       -->
+      <!-- edit form column -->
+      
+      
+      	  
         <!--   <img src="" class=" " alt="profile" height = "150px" width = "150px">
          -->
-       
-          <h3>Update Profile Photo</h3>
-         
-     <%
- 	BlobstoreService blobstoreService = BlobstoreServiceFactory
- 			.getBlobstoreService();
- %>
-							
-    <form action="<%= blobstoreService.createUploadUrl("/upload") %>" method="post" enctype="multipart/form-data">
-        <input type="file" name="myFile">
-       
-        
-        <input type="submit" value="Submit">
-    </form>
-    
-        </div>
-      </div>
-      
-    
-
-      
-      
-      
-      <div class="col-md-9 personal-info">
+     <div class="col-md-20 personal-info">
         <% HttpSession sess1=request.getSession(false); %>
         
         
-   <div class="col-md-9 personal-info">
+<% 
+String blobKey = request.getParameter("blob-key"); 
+ 
+
+BlobKey bk = new BlobKey(blobKey);
+
+
+  ImagesService imagesService = ImagesServiceFactory.getImagesService();
+ 
+  
+  ServingUrlOptions servingOptions = ServingUrlOptions.Builder.withBlobKey(bk);
+ 
+  
+  String servingUrl = imagesService.getServingUrl(servingOptions);
+  
+  
+ %>
+
+<div align="center">
+<h2><font color="#900C3F"><i> Welcome User </i></font></h2> 
+ </div> 
+    
+     <form>
+ <div class="col-md-3" align="left">
+  <img src="<%=servingUrl%>" >
+   </div>
+  </form>
+
+   
+    <div class="col-md-9 personal-info">
                 
         <h3><font color="#DE6262"><b><i>Parent's Details</i></b></font></h3>
 
