@@ -11,6 +11,8 @@ import org.joda.time.Months;
 import org.joda.time.Years;
 
 import com.vaccine.service.ChildDetailService;
+import com.vaccine.service.SendMailService;
+import com.vaccine.service.SomeDailyJobService;
 
 
 @SuppressWarnings("serial")
@@ -32,9 +34,13 @@ public class LoginChildController extends HttpServlet {
 		double weight=Double.parseDouble(request.getParameter("weight"));
 		sess1.setAttribute("weight", weight);
 		
+		
+		
 		String temp =request.getParameter("dob");
 		LocalDate dob = LocalDate.parse(temp);
 		
+		SomeDailyJobService mail = new SomeDailyJobService(email, temp);
+		mail.run();
 		LocalDate lt=new LocalDate();
 		Years years= Years.yearsBetween(dob, lt);
 		Months months=Months.monthsBetween(dob, lt);
