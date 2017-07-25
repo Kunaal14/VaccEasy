@@ -47,7 +47,7 @@
 
 								<div class="col_full nobottommargin">
 									<button class="button button-3d nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
-									<a href="#" class="fright">Forgot Password?</a>
+									<a href="forgot-password.jsp" class="fright">Forgot Password?</a>
 								</div>
 
 							</form>
