@@ -31,6 +31,23 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>ForgotPassword</servlet-name>
+		<servlet-class>com.vaccine.Controller.ForgotPasswordController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForgotPassword</servlet-name>
+		<url-pattern>/forgotpassword</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NewPassword</servlet-name>
+		<servlet-class>com.vaccine.Controller.RecheckPasswordController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewPassword</servlet-name>
+		<url-pattern>/passwordset</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
